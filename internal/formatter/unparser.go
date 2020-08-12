@@ -23,12 +23,12 @@ import (
 	"github.com/google/go-jsonnet/ast"
 )
 
-type unparser struct {
+type Unparser struct {
 	buf     bytes.Buffer
 	options Options
 }
 
-func (u *unparser) write(str string) {
+func (u *unparser) Write(str string) {
 	u.buf.WriteString(str)
 }
 
